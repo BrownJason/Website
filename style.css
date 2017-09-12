@@ -1,0 +1,276 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+table{
+  display: inline-table;
+  margin: 0;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  color: #fff;
+}
+
+/* The styles for the Navigation bar located at the top of the website*/
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.topnav li {
+  float: left;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  text-decoration: none;
+  border-left: 10px;
+  font-size: 18px;
+}
+
+.topnav li a:hover {
+  background-color: #111;
+}
+
+.topnav .displayDate {
+  position: relative;
+  float: right;
+  padding-right: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+/* This fades the images in and out*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.gameimgtext h3 span {
+  color: white;
+  background-color: #000;
+  background: rgba(0,0,0,0.7);
+}
+/* Contains the image styles of the background parallax views*/
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.55;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+/* Styles for the images used in the html file */
+.pimg1 {
+  background-image: url('../img/img1.jpg');
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url('../img/img2.jpg');
+  min-height:400px;
+}
+
+.pimg3 {
+  background-image: url('../img/img3.jpg');
+  min-height:400px;
+}
+
+/* Sections containg the H2 wording of the html file*/
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color:#666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #fff;
+  z-index: 80;
+}
+
+/* Styles for the different ptext */
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans.projects {
+  background-color: transparent;
+  color: #000;
+}
+
+.ptext .border.trans.hobbies {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Styles for the media and copyright part of the website*/
+.media {
+  background-color: #282e34;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.media a {
+  text-decoration: none;
+}
+
+.copyright {
+  background-color: #282e34;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    z-index: 101;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gameImages1:hover, #gameImages2:hover, #golfImg1:hover {
+  opacity: 0.7;
+}
+
+#gameImages1, #gameImages2, #golfImg1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 33%;
+}
+
+.gameimgs, .hobbyimgs {
+  /*border: solid 5px;
+  border-color: white; */
+  width: 100%;
+  z-index: 79;
+  position: relative;
+  float: inherit;
+}
+
+/* So this can be used on mobiles without a problem */
+@media(max-width: 568px) {
+  .pimg1, .pimg2, .pimg3 { background-attachment: scroll; }
+  .modal-content {
+        width: 100%;
+    }
+}

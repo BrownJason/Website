@@ -1,0 +1,137 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>The Golden Hashbrown</title>
+</head>
+<body onload="setInterval(dateAndTime, 1000)" id="home">
+  <!--
+    This is where we display the first text for the parallax view on the website
+  -->
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        The Golden Hashbrown
+      </span>
+    </div>
+  </div>
+  <!--
+    This is the About me section, where the About me is displayed on the website including any images that may
+    be needed to be shown and the div folders that they reside in
+  -->
+  <section class="section section-light" id="about">
+    <h2>About Me</h2>
+    <p>  Jason Brown
+      In this section you will learn a little about me.  <br><br> I am referred to by friends as "The Golden Hashbrown".
+      I am a recent graduate from the University of Toledo class of 2016 school of Engineering with a degree in
+      Computer Science and Engineering Technology. I am a self starter and willing to learn new technologies as
+      they become available. During school the main focus for langauages were C++/Java. I am teaching myself c#
+      Android, Swift, and other languages to further my knowledge.
+    </p>
+  </section>
+  <!--
+    Displays "Projects" as a title setter or header for the next paragraph of the website
+  -->
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans projects">
+        Projects
+      </span>
+    </div>
+  </div>
+  <!--
+    This is the projects section, where the projects is displayed on the website including any images that may
+    be needed to be shown and the div folders that they reside in
+  -->
+  <section class="section section-dark" id="projects">
+    <div class="projects">
+      <h2>Projects</h2>
+      <p>
+        In this secion I will show highlights of past and present projects that I have been working on. I will go into
+        a short description of these projects with Images and also say which platform and langauge was used in the making
+        of the project. </br></br>
+      </p>
+      <div class="codeSamples">
+        <p>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans hobbies">
+        Hobbies
+      </span>
+    </div>
+  </div>
+<!--
+  This is the hobbies section, where the hobbies is displayed on the website including any images that may
+  be needed to be shown and the div folders that they reside in
+-->
+  <section class="section section-dark" id="hobbies">
+    <div class="hobbies">
+      <h2>Hobbies</h2>
+      <p>
+        In this section I will go over a few of the hobbies that I like to do beside program on my free time. <br><br>
+        Some of my hobbies include programming and learning new languages in my free time as I look for a job with the Computer Science
+        and Information Technology field. I also love to bowl and golf with family. We have a family and friends league for both
+        bowling and golf. Golf is Spring / Summer only and every Friday night at Green Oaks Golf course in Ypsilanti. Bowling is 3/4 of
+        the year starting in late August / early September and goes every other Saturday night.
+      </p>
+      <div class="gameimgs">
+        <img src="img/game1.jpg" width="400px" id="gameImages1" alt="Mobile Game: Total Domination Reborn" onclick="imageClicks()" width="auto">
+        <img src="img/game2.jpg" width="400px" id="gameImages2" alt="Mobile Game: Summoners War" onclick="imageClicks()" width="auto">
+      </div>
+      <div class="hobbyimgs">
+        <img src="img/golf1.jpg" width="400px" id="golfImg1" alt="Ypsilanti - Green Oaks Golf Course" onclick="imageClicks()" width="auto">
+        <textarea name="name" rows="8" cols="80">Another image will go here!</textarea>
+      </div>
+  </section>
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        The Golden Hashbrown
+      </span>
+    </div>
+  </div>
+</body>
+<!--
+  This part of the html file is used as the navigation bar at the top of the website
+-->
+<div class="topnav">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <p class="displayDate" id="displayDate"></p>
+  </ul>
+</div>
+
+<!-- Modal content -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="gameImage" >
+  <div id="caption"></div>
+</div>
+<!--
+  This is the footer at the bottom that contains the media links and the copyright clause
+-->
+<footer>
+  <div class="media">
+    <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/jason-brown-7117a646/"></a>
+    <div class="copyright">
+      The Golden Hashbrown &copy; 2017
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="js/jQuery.js"></script>
+</html>

@@ -1,0 +1,65 @@
+/* These are the images that are located inside of the hobbies section of the website */
+.gameimg1 {
+  background-image: url('../img/game1.jpg');
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.gameimg2 {
+  background-image: url('../img/game2.jpg');
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.gameimgtext {
+  text-align: justify;
+  font-size: 27px;
+  letter-spacing: 8px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* This is the slideshow container*/
+#hobbySlideshow {
+  position: relative;
+  height: 550px;
+}
+
+#hobbySlideshow IMG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+}
+
+#hobbySlideshow IMG.active {
+  z-index: 10;
+}
+
+#hobbySlideshow IMG.last-active {
+  z-index: 9;
+}
+
+function slideSwitch() {
+
+    var $active = $('#hobbySlideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#hobbySlideshow IMG:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('#hobbySlideshow IMG:first');
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
